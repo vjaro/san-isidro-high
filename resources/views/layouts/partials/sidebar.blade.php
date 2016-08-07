@@ -34,12 +34,19 @@
             <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.anotherlink') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('message.enrollment') }}</span></a></li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.multilevel') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-table'></i> <span>{{ trans('message.students') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
-                    <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
+                    <li><a href="{{ url('students/create') }}"><i class='fa fa-plus-circle'></i>{{ trans('message.students.create') }}</a></li>
+                    <li><a href="{{ url('students') }}"><i class='fa fa-list'></i>{{ trans('message.students.list') }}</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-table'></i> <span>{{ trans('message.teachers') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class='fa fa-plus-circle'></i>{{ trans('message.teachers.create') }}</a></li>
+                    <li><a href="#"><i class='fa fa-list'></i>{{ trans('message.teachers.list') }}</a></li>
                 </ul>
             </li>
         </ul><!-- /.sidebar-menu -->
