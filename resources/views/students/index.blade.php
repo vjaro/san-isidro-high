@@ -13,8 +13,7 @@
 @endsection
 
 @section('main-content')
-    <table id="example" class="display nowrap dataTable dtr-inline" cellspacing="0" width="100%" role="grid"
-           aria-describedby="example_info" style="width: 100%;">
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
         <tr role="row">
             <th rowspan="1" colspan="1">First Name</th>
@@ -48,10 +47,17 @@
 
         </tbody>
     </table>
+@endsection
 
+
+
+@section('scripts')
+    @include('layouts.partials.scripts')
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(function () {
-            $("#example").DataTable();
+        $(document).ready(function(){
+            $('#example').DataTable();
         });
     </script>
 @endsection
